@@ -575,17 +575,17 @@ const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat(2));
 
 // flat
-const overalBalance = accounts
+const overallBalance = accounts
   .map(acc => acc.movements)
   .flat()
   .reduce((acc, mov) => acc + mov, 0);
-console.log(overalBalance);
+console.log(overallBalance);
 
 // flatMap
-const overalBalance2 = accounts
+const overallBalance2 = accounts
   .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
-console.log(overalBalance2);
+console.log(overallBalance2);
 
 
 ///////////////////////////////////////
@@ -624,7 +624,7 @@ console.log(movements);
 const arr = [1, 2, 3, 4, 5, 6, 7];
 console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
-// Emprty arrays + fill method
+// Empty arrays + fill method
 const x = new Array(7);
 console.log(x);
 // console.log(x.map(() => 5));
@@ -675,7 +675,7 @@ const numDeposits1000 = accounts
 
 console.log(numDeposits1000);
 
-// Prefixed ++ oeprator
+// Prefixed ++ operator
 let a = 10;
 console.log(++a);
 console.log(a);
@@ -697,17 +697,17 @@ console.log(deposits, withdrawals);
 // 4.
 // this is a nice title -> This Is a Nice Title
 const convertTitleCase = function (title) {
-  const capitzalize = str => str[0].toUpperCase() + str.slice(1);
+  const capitalize = str => str[0].toUpperCase() + str.slice(1);
 
   const exceptions = ['a', 'an', 'and', 'the', 'but', 'or', 'on', 'in', 'with'];
 
   const titleCase = title
     .toLowerCase()
     .split(' ')
-    .map(word => (exceptions.includes(word) ? word : capitzalize(word)))
+    .map(word => (exceptions.includes(word) ? word : capitalize(word)))
     .join(' ');
 
-  return capitzalize(titleCase);
+  return capitalize(titleCase);
 };
 
 console.log(convertTitleCase('this is a nice title'));
@@ -722,7 +722,7 @@ Julia and Kate are still studying dogs, and this time they are studying if dogs 
 Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite.
 Eating an okay amount means the dog's current food portion is within a range 10% above and 10% below the recommended portion (see hint).
 
-1. Loop over the array containing dog objects, and for each dog, calculate the recommended food portion and add it to the object as a new property. Do NOT create a new array, simply loop over the array. Forumla: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg)
+1. Loop over the array containing dog objects, and for each dog, calculate the recommended food portion and add it to the object as a new property. Do NOT create a new array, simply loop over the array. Formula: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg)
 2. Find Sarah's dog and log to the console whether it's eating too much or too little. HINT: Some dogs have multiple owners, so you first need to find Sarah in the owners array, and so this one is a bit tricky (on purpose) 🤓
 3. Create an array containing all owners of dogs who eat too much ('ownersEatTooMuch') and an array with all owners of dogs who eat too little ('ownersEatTooLittle').
 4. Log a string to the console for each array created in 3., like this: "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
