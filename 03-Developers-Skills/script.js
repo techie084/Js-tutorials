@@ -1,4 +1,4 @@
-// Always use in all code
+// ALWAYS USE STRICT MODE
 "use strict";
 
 /*
@@ -77,7 +77,6 @@ console.log(amplitudeNew);
 //////////////////
 // HOW TO DE-BUG
 /////////////////
-
 const measureKelvin = function () {
   const measurement = {
     type: "temp",
@@ -86,6 +85,7 @@ const measureKelvin = function () {
     // FIX THE BUG
     value: Number(prompt("Degree Celsius")),
   };
+
   // FIND THE BUG
   console.table(measurement);
 
@@ -128,7 +128,6 @@ console.log(amplitudeBug);
 ///////////////////////////////
 // CODING CHALLENGE 1
 //////////////////////////////
-
 // 1) Understand the problem
 // Array transformed to String, Separated by ...
 // What is x days ? Answer index + 1

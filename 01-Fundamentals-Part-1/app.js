@@ -10,13 +10,16 @@ console.log(firstName);
 console.log(firstName);
 console.log(firstName);
 
+
+// CONVENTIONS AND RULES FOR NAMING VARIABLE
+// VARIABLE NAMING CONVENTION 
 let Wisdom_Anike="WA";
 let $function = 27;
 
 let person = "Wisdom";
 let PI = 3.1415;
 
-let myFirstJob = "Graphic - Designer";
+let myFirstJob = "Graphic-Designer";
 let myCurrentJob = "Programmer";
 
 let job1 = "teacher";
@@ -24,6 +27,8 @@ let job2 = "Programmer";
 
 console.log(myFirstJob);
 
+//////////////////////////
+// DATA TYPES
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -45,7 +50,9 @@ console.log(typeof year);
 
 console.log(typeof null);
 
-
+///////////////////////////////
+// WAYS OF DECLARING VARIABLE
+// LET, CONST, VAR
 let age = 19;
 age = 20;
 
@@ -89,9 +96,9 @@ console.log(ageSarah >= 18);
 const isFullAge = ageSarah >= 18;
 
 console.log(now - 2024 > now - 2024);
+
 ////////////////////////////////////////
 // OPERATOR  PRECEDENCE 
-
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
@@ -105,9 +112,9 @@ console.log(x, y);
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 
-///////////////////////////////////////
+//////////////////////////////
 // CODING CHALLENGE PART ONE
-//////////////////////////////////////
+/////////////////////////////
 // TEST 1
 // Mark
 // const massMark = 78;
@@ -115,6 +122,7 @@ console.log(ageJonas, ageSarah, averageAge);
 // John
 // const massJohn = 92;
 // const heightJohn = 1.95 ;
+
 // TEST 2
 // Mark
 const massMark = 95;
@@ -126,7 +134,7 @@ const heightJohn = 1.76;
 // checking the bmi
 const BMIMark = massMark / heightMark ** 2;
 const BMIJohn = massJohn / (heightJohn * heightJohn);
-// checking if it is true if false wit the comparison operator 
+// checking if it is true if false with the comparison operator 
 const markHigherBMI = BMIMark > BMIJohn;
 // logging it out in the console to see if i got it right 
 console.log(BMIMark, BMIJohn, markHigherBMI);
@@ -149,6 +157,13 @@ console.log(Emediong);
 // USING TEMPLATE LITERALS
 const EmediongNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
 console.log(EmediongNew);
+
+console.log(`Just a regular string...`);
+
+console.log(`String with \n\
+multiple \n\
+line`);
+
 console.log(`multiline 
     strings 
     using the back ticks`);
@@ -158,11 +173,9 @@ console.log(`multiline
     lines);
 
 
-
-//////////////////////////////
+/////////////////////////////////////////////
 // TAKING DECISIONS: IF AND ELSE STATEMENT
-//////////////////////////////
-
+////////////////////////////////////////////
 // const age = 19;
 const age = 15;
 
@@ -170,22 +183,23 @@ if (age >= 18) {
   console.log("Wisdom can start taking driving classes 🚗");
 } else {
   const yearsLeft = 18 - age;
-  console.log(`Wisdom is to young, Wait another ${yearsLeft} years :)`);
+  console.log(`Wisdom is too young, Wait another ${yearsLeft} years :)`);
 }
 
 const birthYear = 2012;
 
 let Century;
-if (birthYear <= 2000) {
+if (birthYear <=2000) {
   Century = 20;
 } else {
   Century = 21;
 }
 console.log(Century);
 
-//////////////////////////////
+//////////////////////
 //CODING CHALLENGE 2
-//////////////////////////////
+/////////////////////
+
 // TEST 1
 // MARK
 const massMark = 78;
@@ -193,6 +207,7 @@ const heightMark = 1.69;
 // JOHN
 const massJohn = 92;
 const heightJohn = 1.95;
+
 // TEST 2
 // MARK
 // const massMark = 95;
@@ -205,7 +220,7 @@ const heightJohn = 1.95;
 const BMIMark = massMark / heightJohn ** 2;
 const BMIJohn = massJohn / (heightMark * heightMark);
 console.log(BMIMark, BMIJohn);
-// using if else statement with template literals and logging out the output in the console
+// using if else statement with template literal and logging out the output in the console
 if (BMIMark > BMIJohn) {
   console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
 } else {
@@ -239,9 +254,9 @@ n = n - 1;
 console.log(n);
 
 
-//////////////////////////////////
+/////////////////////////////
 // TRUTHY AND FALSY VALUES
-/////////////////////////////////
+///////////////////////////
 
 //  5 FALSY VALUES : 0 , " ", null, undefined, NaN
 
@@ -282,15 +297,14 @@ const favourite = Number(prompt("What's your favourite number?"));
 console.log(favourite);
 console.log(typeof favourite);
 
-if (favourite === 23) {
-  // 22 === 23 FALSE 
+if (favourite === 23) { // 22 === 23 -> FALSE 
   console.log("Cool! 23 is an amazing number!");
 } else if (favourite === 7) {
-  console.log("7 is also a great number");
+  console.log("7 is also a cool number");
 }else if (favourite === 9) {
   console.log("9 is also a great number");
 } else {
-  console.log("Number is not 23 or 7");
+  console.log("Number is not 23 or 7 or 9");
 }
 
 if (favourite !== 23 ){
@@ -363,9 +377,9 @@ if (DolphinsScore > KoalasScore && DolphinsScore >= 100) {
 }
 
 
-//////////////////////////////
+/////////////////////
 // SWITCH STATEMENT
-//////////////////////////////
+////////////////////
 
 const day = "monday";
 
@@ -408,9 +422,9 @@ if (day === "monday") {
 }
 
 
-///////////////////////////////
+/////////////////////////////
 // STATEMENT AND EXPRESSION
-//////////////////////////////
+////////////////////////////
 
 // EXPRESSION
 
@@ -431,7 +445,7 @@ if (23 > 10) {
 //////////////////////////////
 
 const age = 23;
-age >= 18 ? console.log("i like to drink wine 🍷") : console.log("i like to drink Water 💧")
+// age >= 18 ? console.log("i like to drink wine 🍷") : console.log("i like to drink Water 💧")
 
 const drink = age >= 18 ? "Wine 🍷" : "Water 💧";
 console.log(drink);

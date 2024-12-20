@@ -2,20 +2,19 @@
 "use strict";
 
 /*
-let hasDriverLicense = false;
+let hasDriversLicense = false;
 const pastTest = true;
 
-if (pastTest) hasDriverLicense = true;
-if (hasDriverLicense) console.log("i can drive :D");
+if (pastTest) hasDriversLicense = true;
+if (hasDriversLicense) console.log("i can drive :D");
 
-// const interface = "true";
+// const interface = "Audio";
 // const private = 534;
 
 
 /////////////
 // FUNCTION
 ////////////
-
 function logger() {
   console.log("My name is Wisdom");
 }
@@ -86,7 +85,7 @@ function fruitProcessor(apples, oranges) {
 }
 console.log(fruitProcessor(2, 3));
 
-
+// REVIEWING FUNCTIONS
 const calAge = function (birthYear) {
   return 2037 - birthYear;
 };
@@ -99,7 +98,7 @@ const yearUntilRetirement = function (birthYear, firstName) {
     console.log(`${firstName} retires in ${retirement} years`);
     return retirement;
   } else {
-    console.log(`${firstName} has already retired 🥳`);
+    console.log(`${firstName} has already retired 🎉`);
     return -1;
   }
 };
@@ -111,7 +110,6 @@ console.log(yearUntilRetirement(2005, "Wisdom"));
 /////////////////////////////
 // CODING CHALLENGE 1
 ////////////////////////////
-
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAverage(3, 4, 5));
 
@@ -143,7 +141,6 @@ checkWinner(scoreDolphins, scoreKoalas);
 //////////////////////////////
 //          ARRAYS
 /////////////////////////////
-
 const friends = ["Micheal", "Steven", "Peter"];
 console.log(friends);
 
@@ -187,7 +184,6 @@ console.log(ages);
 //////////////////////
 // ARRAYS METHODS
 /////////////////////
-
 const friends = ["Micheal", "Steven", "Peter"];
 
 // push method add an element to the end of an array
@@ -221,14 +217,13 @@ console.log(friends.includes("Bob"));
 console.log(friends.indexOf(23));
 
 if (friends.includes("Steven")) {
-  console.log("You have a friends named Steven 😁");
+  console.log("You have a friends named Steven");
 }
 
 
 /////////////////////////
 // CODING CHALLENGE 2
 ////////////////////////
-
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
@@ -265,7 +260,6 @@ const Emediong = {
 ////////////////////////////
 // DOT VS BRACKET NOTATION
 ////////////////////////////
-
 const emediong = {
   firstName: "Wisdom",
   lastName: "Matthew",
@@ -307,14 +301,13 @@ console.log(emediong);
 // "emediong has 3 friends, and his best friend is Femi"
 
 console.log(
-  `${emediong.firstName} has ${emediong.friends.length} friends, and his best friend is called ${emediong.friends[0]}`
+  `${emediong.firstName} has ${emediong.friends.length} friends, and his best friend is called ${emediong.friends[2]}`
 );
 
 
 ///////////////////////
 // OBJECT METHODS
 //////////////////////
-
 const emediong = {
   firstName: "Wisdom",
   lastName: "Matthew",
@@ -342,10 +335,11 @@ const emediong = {
     return this.age;
   },
 
+  // CHALLENGE
   getSummary: function () {
     return `${this.firstName} is a ${this.calcAge()}-year old ${
       this.job
-    }, and he has ${this.hasDriverLicense ? "a" : "No"} driver's License`;
+    }, and he has ${this.hasDriverLicense ? "a" : "No"} driver's License.`;
   },
 };
 
@@ -362,7 +356,6 @@ console.log(emediong.getSummary());
 ///////////////////////////
 // CODING CHALLENGE 3
 //////////////////////////
-
 // Mark BMI
 const mark = {
   fullName: "Mark Miller",
@@ -406,7 +399,6 @@ if (mark.bmi > john.bmi) {
 ////////////////////////////
 // LOOPS (FOR LOOPS)
 ////////////////////////////
-
 // for loops keeps running while condition is TRUE
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting Weight's Repetition ${rep} 🏋️`);
@@ -415,7 +407,6 @@ for (let rep = 1; rep <= 10; rep++) {
 ////////////////////////////////
 // LOOPING THROUGH AN ARRAY
 ////////////////////////////////
-
 const Wisdom = [
   "Wisdom",
   "Matthew",
@@ -472,7 +463,6 @@ for (let i = 0; i < Wisdom.length; i++) {
 //////////////////////////////////////////
 // LOOPING BACKWARD AND LOOPS IN LOOPS
 /////////////////////////////////////////
-
 const Wisdom = [
   "Wisdom",
   "Matthew",
@@ -487,7 +477,7 @@ for (let i = Wisdom.length - 1; i >= 0; i--) {
 
 // CREATING A LOOP INSIDE OF A LOOP
 for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`----STARTING EXERCISE ${exercise}`);
+  console.log(`-------- STARTING EXERCISE ${exercise}`);
 
   for (let rep = 1; rep < 6; rep++) {
     console.log(`Exercise ${exercise}: Lifting weight's repetition ${rep} 🏋️ `);
@@ -550,8 +540,6 @@ const calcAverage = function (arr) {
   }
   return sum / arr.length;
 };
-console.log(calcAverage([2,3,6]));
+console.log(calcAverage([2, 3, 6]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
-
-

@@ -1,6 +1,5 @@
 // ALWAYS USE STRICT
 "use strict";
-
 /*
 ///////////////////////
 //DEFAULT PARAMETERS
@@ -15,7 +14,6 @@ const createBooking = function (
   // ES5
   // numPassengers = numPassengers || 1;
   // price = price || 199;
-
   const booking = {
     flightNum,
     numPassengers,
@@ -31,7 +29,6 @@ createBooking("LH123", 2);
 createBooking("LH123", 5);
 
 createBooking("LH123", undefined, 1000);
-
 
 /////////////////////////////////////////////////////
 // HOW PASSING ARGUMENT WORKS: VALUE VS REFERENCE
@@ -68,11 +65,9 @@ const newPassport = function (person) {
 newPassport(jonas);
 checkIn(flight, jonas);
 
-
 //////////////////////////////////////////
 // FIRST-CLASS AND HIGH-ORDER FUNCTIONS
 /////////////////////////////////////////
-
 
 ///////////////////////////////////////////
 // FUNCTIONS ACCEPTING CALLBACK FUNCTIONS
@@ -105,7 +100,6 @@ const high5 = function () {
 document.body.addEventListener("click", high5);
 ["Jonas", "Martha", "Adam"].forEach(high5);
 
-
 //////////////////////////////////////
 // FUNCTION RETURNING OTHER FUNCTION
 //////////////////////////////////////
@@ -124,7 +118,6 @@ greet("Hello")("Jonas");
 // Small Challenge
 const greetF = (greetings) => (name) => console.log(`${greetings} ${name}`);
 greet("Hi")("Matthew Wisdom");
-
 
 ///////////////////////////////
 // THE CALL AND APPLY METHOD
@@ -227,7 +220,6 @@ const addTaxRate = function (rate) {
 };
 const addVAT2 = addTaxRate(0.23);
 
-
 ////////////////////////
 // CODING CHALLENGE #1
 ///////////////////////
@@ -276,7 +268,6 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 // [5, 2, 3]
 // [1, 5, 3, 9, 6, 1]
 
-
 ////////////////////////////////////////////////////
 // IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)
 ////////////////////////////////////////////////////
@@ -316,12 +307,11 @@ const secureBooking = function () {
 
 const booker = secureBooking();
 
-booker()
-booker()
-booker()
+booker();
+booker();
+booker();
 
-console.dir(booker)
-
+console.dir(booker);
 
 // Example 1
 let f;
