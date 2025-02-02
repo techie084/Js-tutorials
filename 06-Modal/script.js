@@ -1,25 +1,25 @@
-// ALWAYS USE STRICT MODE
+// Always Use Strict Mode
 "use strict";
 
-// STORING THE CLASSES IN VARIABLES
+// Storing The Classes inn Variable
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnOpenModal = document.querySelectorAll(".show-modal");
 
-// FUNCTION FOR OPENING MODAL
+// Function For Opening Modal
 const openModal = function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
 
-// FUNCTION FOR CLOSING MODAL
+// Function For Closing Modal
 const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
 
-// LOOPING THROUGH THE BTN AND PASSING IN EVENT-HANDLERS AND THE FUNCTION ABOVE
+// Looping Through the Btn and Passing Event-Handlers And the Function Above
 for (let i = 0; i < btnOpenModal.length; i++)
   btnOpenModal[i].addEventListener("click", openModal);
 
@@ -27,7 +27,7 @@ btnCloseModal.addEventListener("click", closeModal);
 
 overlay.addEventListener("click", closeModal);
 
-// CLOSING THE MODAL WITH THE ESCAPE KEY
+// Closing the Modal With escape Key
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains(".hidden")) {
     closeModal();

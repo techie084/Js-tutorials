@@ -10,9 +10,9 @@ console.log(firstName);
 console.log(firstName);
 console.log(firstName);
 
-
-// CONVENTIONS AND RULES FOR NAMING VARIABLE
-// VARIABLE NAMING CONVENTION 
+////////////////////////////////////////////////////
+// Conventions And Rules For Naming Variable
+// Variable Naming Convention 
 let Wisdom_Anike="WA";
 let $function = 27;
 
@@ -28,7 +28,7 @@ let job2 = "Programmer";
 console.log(myFirstJob);
 
 //////////////////////////
-// DATA TYPES
+// Data Types
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -51,7 +51,7 @@ console.log(typeof year);
 console.log(typeof null);
 
 ///////////////////////////////
-// WAYS OF DECLARING VARIABLE
+// Ways of Declaring Variable
 // LET, CONST, VAR
 let age = 19;
 age = 20;
@@ -98,7 +98,7 @@ const isFullAge = ageSarah >= 18;
 console.log(now - 2024 > now - 2024);
 
 ////////////////////////////////////////
-// OPERATOR  PRECEDENCE 
+// Operator Precedence
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
@@ -113,9 +113,8 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 
 //////////////////////////////
-// CODING CHALLENGE PART ONE
-/////////////////////////////
-// TEST 1
+// Coding Challenge #1
+// Test 1
 // Mark
 // const massMark = 78;
 // const heightMark = 1.69;
@@ -140,21 +139,20 @@ const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
 
-//////////////////////////////
-// STRING AND TEMPLATE LITERALS
-//////////////////////////////
+/////////////////////////////////////
+// Strings And Template Literals
 
 const firstName = "Wisdom";
 const job = "Student";
 const birthYear = 2005;
 const year = 2024;
 
-// concatenate
+// Concatenate
 const Emediong =
   "I'm " + firstName + ", a" + (birthYear - year) + " year old " + job + "!";
 console.log(Emediong);
 
-// USING TEMPLATE LITERALS
+// Using Template Literals
 const EmediongNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
 console.log(EmediongNew);
 
@@ -174,8 +172,7 @@ console.log(`multiline
 
 
 /////////////////////////////////////////////
-// TAKING DECISIONS: IF AND ELSE STATEMENT
-////////////////////////////////////////////
+// Taking Decisions : If And else Statement
 // const age = 19;
 const age = 15;
 
@@ -197,8 +194,7 @@ if (birthYear <=2000) {
 console.log(Century);
 
 //////////////////////
-//CODING CHALLENGE 2
-/////////////////////
+//Coding Challenge #2
 
 // TEST 1
 // MARK
@@ -229,11 +225,10 @@ if (BMIMark > BMIJohn) {
 
 
 //////////////////////////////////
-// TYPE CONVERSION AND COERCION
-/////////////////////////////////
+// Type Conversion And Coercion 
 
-// CONVERTING A NUMBER TO A STRING
-// TYPE CONVERSION
+// Converting a Number to a String
+// Type Conversion 
 const inputYear = "1991";
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear) + 18);
@@ -243,7 +238,7 @@ console.log(typeof NaN);
 
 console.log(String(23), 23);
 
-// TYPE COERCION
+// Type Coercion 
 console.log("i am " + 19 + " years old");
 console.log("23" - "10" - 3);
 console.log("23" > "18");
@@ -255,8 +250,7 @@ console.log(n);
 
 
 /////////////////////////////
-// TRUTHY AND FALSY VALUES
-///////////////////////////
+// Truthy and Falsy Values
 
 //  5 FALSY VALUES : 0 , " ", null, undefined, NaN
 
@@ -282,8 +276,7 @@ if (height) {
 
 
 //////////////////////////////////
-// EQUALITY OPERATOR
-/////////////////////////////////
+// Equality Operator
 
 const age = 19;
 if (age === 18) { // does not perform type coercion 
@@ -313,8 +306,8 @@ console.log("Why not 23 ?");
 
 
 //////////////////////////////////
-// LOGICAL OPERATOR
-/////////////////////////////////
+// Logical Operator
+
 const hasDriverLicense = true; // A
 const hasGoodVision = false; // B
 
@@ -340,8 +333,7 @@ if (hasDriverLicense && hasGoodVision && !isTired) {
 
 
 //////////////////////////////
-//CODING CHALLENGE 3
-//////////////////////////////
+//Coding Challenge #3
 // // Dolphins Score
 // const DolphinsScore = (96 + 108 + 89) / 3;
 // // Koalas Score
@@ -377,9 +369,8 @@ if (DolphinsScore > KoalasScore && DolphinsScore >= 100) {
 }
 
 
-/////////////////////
-// SWITCH STATEMENT
-////////////////////
+///////////////////////
+// Switch Statement
 
 const day = "monday";
 
@@ -422,27 +413,25 @@ if (day === "monday") {
 }
 
 
-/////////////////////////////
-// STATEMENT AND EXPRESSION
-////////////////////////////
+///////////////////////////////
+// Statement And Expression
 
-// EXPRESSION
+// Expression
 
-// AN EXPRESSION ALWAYS PRODUCE A VALUE
+// An Expression Always Produces a Value
 3 + 4;
 1991;
 (true && false) || !false;
 
-// STATEMENT
+// Statement
 
-// A STATEMENT IS BLOCK OF CODE THAT DOES NOT PRODUCE ANY VALUE
+// A Statement is a Block of Code that does not Produce any Value
 if (23 > 10) {
   const str = "23 is bigger";
 }
 
 ///////////////////////////////
-// TERNARY OPERATOR
-//////////////////////////////
+// Ternary Operator
 
 const age = 23;
 // age >= 18 ? console.log("i like to drink wine 🍷") : console.log("i like to drink Water 💧")
@@ -462,8 +451,7 @@ console.log(`i like to drink ${age >= 18 ? "wine 🍷" : "water 💧"}`);
 */
 
 ///////////////////////////////
-// CODING CHALLENGE 4
-//////////////////////////////
+// Coding Challenge #4
 const bill = 430;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(

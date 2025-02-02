@@ -1,4 +1,4 @@
-// ALWAYS USE STRICT MODE
+// Always Use Strict Mode
 "use strict";
 
 /////////////////////////////////////////////////
@@ -186,7 +186,7 @@ const updateUI = function (acc) {
 };
 
 ////////////////////////////////////////////////////////////////
-// IMPLEMENTING A COUNTDOWN TIMER
+// Implementing a Count Down Timer 
 const startLogOutTimer = function () {
   const tick = function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
@@ -370,6 +370,7 @@ btnSort.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
 /*
 console.log(23 === 23.0);
 
@@ -378,11 +379,11 @@ console.log(23 === 23.0);
 console.log(0.1 + 0.2);
 console.log(0.1 + 0.2 === 0.3);
 
-// conversion
+// Conversion
 console.log(Number("23"));
 console.log(+"23");
 
-// parsing
+// Parsing
 console.log(Number.parseInt("30px", 10));
 console.log(Number.parseInt("e23", 10));
 
@@ -408,8 +409,8 @@ console.log(Number.isInteger(23.0));
 console.log(Number.isInteger(23 / 0));
 
 
-/////////////////////////////////////////////////////////////
-// MATH AND ROUNDING
+/////////////////////////
+// Math and Rounding
 console.log(Math.sqrt(25));
 console.log(25 ** (1 / 2));
 console.log(8 ** (1 / 3));
@@ -450,7 +451,7 @@ console.log((2.345).toFixed(2));
 console.log(+(2.345).toFixed(2));
 
 
-/////////////////////////////////////////////////////////
+/////////////////////////
 // Reminder Operator
 console.log(5 % 2);
 console.log(5 / 2);
@@ -478,8 +479,8 @@ labelBalance.addEventListener("click", function () {
 });
 
 
-//////////////////////////////////////////////////////////
-// WORKING WITH BIG-INT
+/////////////////////////////
+// Working With Big-Int
 console.log(2 ** 53 - 1);
 console.log(Number.MAX_SAFE_INTEGER);
 console.log(2 ** 53 + 1);
@@ -512,8 +513,8 @@ console.log(11n / 3n);
 console.log(10 / 3);
 
 
-///////////////////////////////////////////////////////////////////
-// CREATING DATE
+//////////////////////
+// Creating Dates
 // create a date
 const now = new Date();
 console.log(now);
@@ -550,7 +551,7 @@ future.setFullYear(2040);
 console.log(future);
 
 
-///////////////////////////////////////////////////////////////////////////
+////////////////////////////
 // Operations with Dates
 const future = new Date(2037, 10, 19, 15, 23);
 console.log(+future);
@@ -562,8 +563,8 @@ const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 24));
 console.log(days1);
 
 
-/////////////////////////////////////////////////////////////////////////
-// INTERNATIONALIZING DATES (INTL)
+////////////////////////////////////////
+// Internationalizing Dates (INTL)
 const num = 3884764.23;
 
 const options = {
@@ -582,8 +583,8 @@ console.log(
 );
 
 
-/////////////////////////////////////////////////////////////////////
-// TIMERS: SETTIMEOUT AND SETINTERVAL
+///////////////////////////////////////////
+// Timer : Set-Time-Out AND Set-Interval
 // setTimeout
 const ingredients = ["olives", "spinach"];
 const pizzaTimer = setTimeout(

@@ -1,4 +1,4 @@
-// ALWAYS USE STRICT MODE
+// Always Use Strict Mode
 "use strict";
 
 //////////////////////////////////////////////////
@@ -63,7 +63,7 @@ const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 
 ///////////////////////////
-// CREATING DOM ELEMENTS
+// Creating Dom Element
 
 //////////////
 // Functions
@@ -115,7 +115,7 @@ const calcDisplaySummary = function (acc) {
 };
 
 ////////////////////////
-// COMPUTING USERNAME
+// Computing UserName
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -216,7 +216,7 @@ btnClose.addEventListener("click", function (e) {
     Number(inputClosePin.value) === currentAccount.pin
   ) {
     //////////////////////
-    // FIND-INDEX METHOD
+    // Find-index Method
     const index = accounts.findIndex(
       (acc) => acc.username === currentAccount.username
     );
@@ -249,7 +249,7 @@ btnSort.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 let arr = ["a", "b", "c", "d", "e"];
 
-// SLICE
+// Slice
 console.log(arr.slice(2));
 console.log(arr.slice(2, 4));
 console.log(arr.slice(-2));
@@ -258,30 +258,30 @@ console.log(arr.slice(1, -2));
 console.log(arr.slice());
 console.log([...arr]);
 
-// SPLICE
+// Splice
 // console.log(arr.splice(2));
 arr.splice(-1);
 console.log(arr);
 arr.splice(1, 2);
 console.log(arr);
 
-// REVERSE
+// Reverse
 arr = ["a", "b", "c", "d", "e"];
 const arr2 = ["j", "i", "h", "g", "f"];
 console.log(arr2.reverse());
 console.log(arr2);
 
-// CONCAT
+// Concat
 const letters = arr.concat(arr2);
 console.log(letters);
 console.log([...arr, ...arr2]);
 
-// JOIN
+// Join
 console.log(letters.join(" - "));
 
 
 ////////////////////////////////////////
-// LOOPING OVER AN ARRAY (FOR - EACH)
+// Looping Over and Array (For-Each)
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 console.log("---- LOOPING THROUGH ARRAYS ----");
@@ -310,7 +310,7 @@ movements.forEach(function (mov, i, arr) {
 
 
 ////////////////////////////////
-// FOR EACH WITH MAPS AND SET
+// For Each With Maps nd Set
 // Maps
 const currencies = new Map([
   ["USD", "United States dollar"],
@@ -330,7 +330,7 @@ currenciesUnique.forEach(function (value, _, map) {
 
 
 ////////////////////////
-// CODING CHALLENGE #1
+// Coding Challenge #1
 const checkDogs = function (dogJulia, dogKate) {
   const dogJuliaCorrected = dogJulia.slice();
   dogJuliaCorrected.splice(0, 1);
@@ -353,8 +353,8 @@ console.log([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 
 
 ////////////////////////////////////////////////
-// DATA TRANSFORMATIONS : MAP, FILTER ,REDUCE
-// #1, THE MAP METHOD
+// Data Transformation : Map, Filter ,Reduce
+// #1, The Map Method
 
 const eurToUsd = 1.1;
 
@@ -380,7 +380,7 @@ const movementsDescription = movements.map((mov, i) => {
 
 console.log(movementsDescription);
 
-// #2, FILTER METHOD
+// #2, Filter Method
 const deposit = movements.filter(function (mov, i, arr) {
   return mov > 0;
 });
@@ -397,7 +397,7 @@ const withdrawals = movements.filter((mov) => mov < 0);
 console.log(withdrawals);
 
 
-// #3, REDUCE METHOD
+// #3, Reduce Method
 console.log(movements);
 
 // accumulator --> SNOWBALL
@@ -421,7 +421,7 @@ console.log(max);
 
 
 ////////////////////////
-// CODING CHALLENGE #2
+// Coding Challenge #2
 const calcAverageHumanAge = function (ages) {
   const humanAges = ages.map((age) => (age <= 2 ? 2 * age : 16 + age * 4));
   const adults = humanAges.filter((age) => age >= 18);
@@ -444,11 +444,11 @@ const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg1, avg2);
 
 
-//////////////////////////////////
-// THE MAGIC OF CHAINING METHODS
+/////////////////////////////////////
+// The MAgic Of Chaining Methods
 const eurToUsd = 1.1;
 
-// PIPELINE
+// Pipeline
 const totalDepositsUSD = movements
   .filter((mov) => mov > 0)
   .map((mov, i, arr) => {
@@ -461,7 +461,7 @@ console.log(totalDepositsUsd);
 
 
 ////////////////////////
-// CODING CHALLENGE #3
+// Coding Challenge #3
 const calcAverageHumanAge = (ages) =>
   ages
     .map((age) => (age <= 2 ? 2 * age : 16 + age * 4))
@@ -474,7 +474,7 @@ console.log(avg1, avg2);
 
 
 ////////////////////
-// THE FIND METHOD
+// The Find Method
 const firstWithdrawal = movements.find((mov) => mov < 0);
 // console.log(movements);
 // console.log(firstWithdrawal);
@@ -486,45 +486,45 @@ const account = accounts.find((acc) => acc.owner === "Jessica Davis");
 
 
 ////////////////////////////
-// SOME AND EVERY METHODS
+// Some And Every Methods
 console.log(movements);
 
-// EQUALITY
+// Equality
 console.log(movements.includes(-130));
 
-// SOME: CONDITION
+// Some : Condition
 console.log(movements.some((mov) => mov === -130));
 
 const anyDeposits = movements.some((mov) => mov > 0);
 console.log(anyDeposits);
 
-// EVERY
+// Every
 console.log(movements.every((mov) => mov > 0));
 console.log(account4.movements.every((mov) => mov > 0));
 
-// Separate callback
+// Separate Callback
 const deposit = (mov) => mov > 0;
 console.log(movements.some(deposit));
 console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
 
 
-///////////////////////
-// FLAT AND FLAT-MAP
+////////////////////////
+// Flat and Flat-Map 
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 console.log(arr.flat());
 
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat(2));
 
-// flat
+// Flat
 const overallBalance = accounts
   .map((acc) => acc.movements)
   .flat()
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance);
 
-// flat Map
+// Flat Map
 const overallBalance2 = accounts
   .flatMap((acc) => acc.movements)
   .reduce(acc, (mov) => acc + mov, 0);
@@ -532,7 +532,7 @@ console.log(overallBalance2);
 
 
 /////////////////////
-// SORTING ARRAYS
+// Sorting Arrays
 // Strings
 const owner = ["jonas", "Zach", "Adam", "Martha"];
 console.log(owner.sort());
@@ -562,7 +562,7 @@ console.log(movements);
 
 
 /////////////////////////////////////////////
-// MORE WAYS OF CREATING AND FILLING ARRAYS
+// More Ways of Creating and Filling Arrays
 const arr = [1, 2, 3, 4, 5, 6, 7];
 console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
@@ -596,7 +596,7 @@ labelBalance.addEventListener("click", function () {
 
 
 //////////////////////////////
-// ARRAYS METHODS PRACTICE
+// Arrays Methods Practice
 // 1.
 const bankDepositSum = accounts
   .flatMap((acc) => acc.movements)
@@ -655,7 +655,7 @@ console.log(convertTitleCase("and here is another title with an eXAMPLe"));
 */
 
 /////////////////////////
-// CODING CHALLENGE #2
+// Coding Challenge #2
 const dogs = [
   { weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
   { weight: 8, curFood: 200, owners: ["Matilda"] },
@@ -710,4 +710,3 @@ console.log(dogs.filter(checkEatingOkay));
 // sort it by recommended food portion in an ascending order [1,2,3]
 const dogsSorted = dogs.slice().sort((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
-  

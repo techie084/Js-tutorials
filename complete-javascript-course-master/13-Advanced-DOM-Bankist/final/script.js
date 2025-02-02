@@ -316,9 +316,9 @@ console.log(document.getElementsByClassName('btn'));
 // Creating and inserting elements
 const message = document.createElement('div');
 message.classList.add('cookie-message');
-// message.textContent = 'We use cookied for improved functionality and analytics.';
+// message.textContent = 'We use cookies for improved functionality and analytics.';
 message.innerHTML =
-  'We use cookied for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
+  'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
 
 // header.prepend(message);
 header.append(message);
@@ -383,7 +383,7 @@ logo.classList.toggle('c');
 logo.classList.contains('c'); // not includes
 
 // Don't use
-logo.clasName = 'jonas';
+logo.className = 'jonas';
 
 
 ///////////////////////////////////////

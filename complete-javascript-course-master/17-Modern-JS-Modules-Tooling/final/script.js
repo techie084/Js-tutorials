@@ -88,7 +88,7 @@ console.log(ShoppingCart2.shippingCost);
 ///////////////////////////////////////
 // CommonJS Modules
 // Export
-export.addTocart = function (product, quantity) {
+export.addToCart = function (product, quantity) {
   cart.push({ product, quantity });
   console.log(
     `${quantity} ${product} added to cart (sipping cost is ${shippingCost})`
@@ -96,7 +96,7 @@ export.addTocart = function (product, quantity) {
 };
 
 // Import
-const { addTocart } = require('./shoppingCart.js');
+const { addToCart } = require('./shoppingCart.js');
 */
 
 ///////////////////////////////////////

@@ -1,4 +1,4 @@
-// ALWAYS USE STRICT MODE
+// Always Use Strict Mode
 "use strict";
 
 ///////////////////////////////////////
@@ -176,7 +176,7 @@ addArrow(2, 5, 8);
 
 
 ///////////////////////////////////////
-// Objects vs. primitives
+// Objects vs. Primitives
 let age = 30;
 let oldAge = age;
 age = 31;

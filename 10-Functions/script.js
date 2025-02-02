@@ -1,9 +1,9 @@
-// ALWAYS USE STRICT
+// Always Use Strict Mode
 "use strict";
+
 /*
 ///////////////////////
-//DEFAULT PARAMETERS
-///////////////////////
+//Default Parameters
 const bookings = [];
 
 const createBooking = function (
@@ -31,8 +31,7 @@ createBooking("LH123", 5);
 createBooking("LH123", undefined, 1000);
 
 /////////////////////////////////////////////////////
-// HOW PASSING ARGUMENT WORKS: VALUE VS REFERENCE
-////////////////////////////////////////////////////
+// How Passing Argument Works: Values VS Reference
 const flight = "LH234";
 const jonas = {
   name: "Jonas Schmedtmann",
@@ -66,12 +65,11 @@ newPassport(jonas);
 checkIn(flight, jonas);
 
 //////////////////////////////////////////
-// FIRST-CLASS AND HIGH-ORDER FUNCTIONS
-/////////////////////////////////////////
+// First-Class And High-Order Function
+
 
 ///////////////////////////////////////////
-// FUNCTIONS ACCEPTING CALLBACK FUNCTIONS
-//////////////////////////////////////////
+// Function Accepting Call-Back Function
 const oneWord = function (str) {
   return str.replace(/ /g, "").toLowerCase();
 };
@@ -101,8 +99,7 @@ document.body.addEventListener("click", high5);
 ["Jonas", "Martha", "Adam"].forEach(high5);
 
 //////////////////////////////////////
-// FUNCTION RETURNING OTHER FUNCTION
-//////////////////////////////////////
+// Function Returning Other Function
 const greet = function (greeting) {
   return function (name) {
     console.log(`${greeting} ${name}`);
@@ -120,8 +117,7 @@ const greetF = (greetings) => (name) => console.log(`${greetings} ${name}`);
 greet("Hi")("Matthew Wisdom");
 
 ///////////////////////////////
-// THE CALL AND APPLY METHOD
-//////////////////////////////
+// The Call and Apply Method
 const lufthansa = {
   airline: "Lufthansa",
   iataCode: "LH",
@@ -174,8 +170,7 @@ console.log(swiss);
 book.call(swiss, ...flightData);
 
 /////////////////////
-// THE BIND METHOD
-////////////////////
+// The Bind Method
 // book.call(eurowings, 23, "Sarah Williams");
 
 const bookEW = book.bind(eurowings);
@@ -221,8 +216,7 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 
 ////////////////////////
-// CODING CHALLENGE #1
-///////////////////////
+// Coding Challenge #1
 const poll = {
   question: "What is your favourite programming language ",
   option: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
@@ -269,8 +263,7 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 // [1, 5, 3, 9, 6, 1]
 
 ////////////////////////////////////////////////////
-// IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)
-////////////////////////////////////////////////////
+// Immediately Invoked Function Expression (IIFE)
 const runOnce = function () {
   console.log("This will never run again");
 };
@@ -293,9 +286,8 @@ runOnce();
 // console.log(isPrivate);
 console.log(notPrivate);
 
-//////////////
-// CLOSURES
-/////////////
+////////////////
+// Closures
 const secureBooking = function () {
   let PassengerCount = 0;
 
@@ -355,9 +347,8 @@ const perGroup = 1000;
 boardPassengers(180, 3);
 */
 
-////////////////////////
-// CODING CHALLENGE #2
-///////////////////////
+//////////////////////////
+// Coding Challenge #2
 (function () {
   const header = document.querySelector("h1");
   header.style.color = "red";

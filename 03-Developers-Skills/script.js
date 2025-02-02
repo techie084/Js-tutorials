@@ -1,4 +1,4 @@
-// ALWAYS USE STRICT MODE
+// Always Use Strict Mode
 "use strict";
 
 /*
@@ -74,9 +74,8 @@ const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
 
 
-//////////////////
-// HOW TO DE-BUG
-/////////////////
+////////////////////
+// How To De-Bug
 const measureKelvin = function () {
   const measurement = {
     type: "temp",
@@ -97,10 +96,10 @@ const measureKelvin = function () {
   return kelvin;
 };
 
-// IDENTIFY THE BUG
+// Identify the Bug
 console.log(measureKelvin());
 
-// HOW TO USE A DEBUGGER
+// How to use a Debugger 
 const calcTempAmplitudeBug = function (temp1, temp2) {
   const temps = temp1.concat(temp2);
   console.log(temps);
@@ -121,13 +120,12 @@ const calcTempAmplitudeBug = function (temp1, temp2) {
 // const amplitudeNew = calcTempAmplitudeNew(temperature);
 const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
 
-// IDENTIFY THE BUG
+// Identify the Bug
 console.log(amplitudeBug);
 */
 
 ///////////////////////////////
-// CODING CHALLENGE 1
-//////////////////////////////
+// Coding Challenge #1
 // 1) Understand the problem
 // Array transformed to String, Separated by ...
 // What is x days ? Answer index + 1

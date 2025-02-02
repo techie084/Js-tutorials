@@ -134,8 +134,181 @@ const handleHover = function (e) {
 nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
-// Sticky navigation 
+// Sticky navigation
+// const initialsCoords = section1.getBoundingClientRect();
+// console.log(initialsCoords);
 
+// window.addEventListener("scroll", function () {
+//   console.log(window.scrollY);
+
+//   if (this.window / this.scrollY > initialsCoords.top)
+//     nav.classList.add("Sticky");
+//   else nav.classList.remove("sticky");
+// });
+
+// Sticky Navigation : Intersection Observer API
+// const ObsCallBack = function (entries, Observer) {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// };
+
+// const ObsOption = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
+
+// const Observer = new IntersectionObserver(ObsCallBack, ObsOption);
+// Observer.observe(section1);
+
+const header = document.querySelector(".header");
+const navHeight = nav.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(header);
+
+// Reveal Section
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  // section.classList.add("section--hidden");
+});
+
+// Lazy loading image
+const imgTargets = document.querySelectorAll("img[data-src]");
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  // replace scr with the data-src
+  entry.target.src = entry.target.dataset.src;
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: "200px",
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));
+
+// Slider component
+const slider = function () {
+  const slides = document.querySelectorAll(".slide");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
+
+  let curtSlide = 0;
+  const maxSlide = slides.length;
+
+  // Functions
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        "beforeend",
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
+    });
+  };
+
+  const activateDots = function (slide) {
+    document
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add("dots__dot--active");
+  };
+
+  const gotoSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (curtSlide === maxSlide - 1) {
+      curtSlide = 0;
+    } else {
+      curtSlide++;
+    }
+    gotoSlide(curtSlide);
+    activateDots(curtSlide);
+  };
+
+  const prevSlide = function () {
+    if (curtSlide === 0) {
+      curtSlide = maxSlide - 1;
+    } else {
+      curtSlide--;
+    }
+    gotoSlide(curtSlide);
+    activateDots(curtSlide);
+  };
+
+  const init = function () {
+    gotoSlide(0);
+    createDots();
+    activateDots(0);
+  };
+  init();
+
+  // event handlers
+  btnRight.addEventListener("click", nextSlide);
+  btnLeft.addEventListener("click", prevSlide);
+
+  document.querySelector("keydown", function (e) {
+    if (e.key === "ArrowLeft") prevSlide();
+    e.key === "ArrowRight" && nextSlide();
+  });
+
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
+      const { slide } = e.target.dataset;
+      gotoSlide(slide);
+      activateDots(slide);
+    }
+  });
+};
+slider();
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
@@ -332,4 +505,45 @@ console.log(h1.parentElement.children);
 
 ////////////////////////////////////////////////////////////
 IMPLEMENTING A STICKY NAVIGATION : THE SCROLL EVENT
+
+
+////////////////////////////////////////////////////////////
+// A BETTER WAY: THE INTERSECTION OBSERVER API
+
+
+////////////////////////////////////////////////////////////
+// REVEALING ELEMENT ON SCROLL
+
+
+///////////////////////////////////////////////////////////
+// LAZY LOADING IMAGES 
+
+
+///////////////////////////////////////////////////////////
+// BUILDING A SLIDER COMPONENT :PART ONE
+
+
+///////////////////////////////////////////////////////////
+// BUILDING A SLIDER COMPONENT :PART TWO
+
+
+///////////////////////////////////////////////////////////
+// LIFECYCLE DOM EVENTS
+
+document.addEventListener("DOMContentLoaded", function (e) {
+  console.log("HTML parsed and DOM tree built!", e);
+});
+
+window.addEventListener("load", function (e) {
+  console.log("page fully loaded", e);
+});
+
+// window.addEventListener("beforeunload", function (e) {
+//   e.preventDefault();
+//   console.log(e);
+//   e.returnValue = "";
+// });
+
 */
+///////////////////////////////////////////////////////////
+// EFFICIENT SCRIPT LOADING : DEFER AND ASYNC

@@ -1,9 +1,9 @@
-// ALWAYS USE STRICT MODE
+// Always Use Strict Mode
 "use strict";
 
 ////////////////////////////////
-// DOM = DOCUMENT OBJECT MODEL
-// DOM MANIPULATION
+// DOM = Document Object Model
+// Dom Manipulation
 /*
 console.log(document.querySelector('.message').textContent);
 document.querySelector('.message').textContent = '🎉 Correct Number!';
@@ -23,17 +23,17 @@ const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
 };
 
-// IMPLEMENTING FUNCTIONALITY TO THE GAME BY ADDING EVENT LISTENERS
+// Implementing Functionality Into The Game By Adding event-Listeners
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   // console.log(guess, typeof guess);
 
   // When there is no input
   if (!guess) {
-    // WHEN THERE IS NO NUMBER INPUT
+    // When There is No Number Input
     displayMessage("⛔️ No number!");
 
-    // WHEN PLAYER WINS
+    // When Player Wins
   } else if (guess === secretNumber) {
     // document.querySelector('.message').textContent = '🎉 Correct Number!';
     displayMessage("🎉 Correct Number!");
@@ -47,15 +47,15 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".highscore").textContent = highscore;
     }
   }
-  // REFACTORING THE CODE
+  // Refactoring The Code
   else if (guess !== secretNumber) {
     if (score > 1) {
-      // USING THE TERNARY OPERATOR
+      // Using The Ternary Operator
       displayMessage(guess > secretNumber ? "📈 Too high!" : "📉 Too low!");
       score--;
       document.querySelector(".score").textContent = score;
     }
-    // WHEN THE USER LOOSES THE GAME
+    // When the User Looses The Game
     else {
       displayMessage("💥 You lost the game!");
       document.querySelector(".score").textContent = 0;
@@ -86,7 +86,7 @@ document.querySelector(".check").addEventListener("click", function () {
   // }
 });
 
-// RESET BUTTON
+// Reset Button
 document.querySelector(".again").addEventListener("click", function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;

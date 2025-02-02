@@ -12,14 +12,14 @@ function calcAge(birthYear) {
     console.log(output);
 
     if (birthYear >= 1981 && birthYear <= 1996) {
-      var millenial = true;
+      var millennial = true;
       // Creating NEW variable with same name as outer scope's variable
       const firstName = 'Steven';
 
-      // Reasssigning outer scope's variable
+      // Reassigning outer scope's variable
       output = 'NEW OUTPUT!';
 
-      const str = `Oh, and you're a millenial, ${firstName}`;
+      const str = `Oh, and you're a millennial, ${firstName}`;
       console.log(str);
 
       function add(a, b) {
@@ -27,7 +27,7 @@ function calcAge(birthYear) {
       }
     }
     // console.log(str);
-    console.log(millenial);
+    console.log(millennial);
     // console.log(add(2, 3));
     console.log(output);
   }
@@ -138,17 +138,17 @@ const jonas = {
 
     // Solution 1
     // const self = this; // self or that
-    // const isMillenial = function () {
+    // const isMillennial = function () {
     //   console.log(self);
     //   console.log(self.year >= 1981 && self.year <= 1996);
     // };
 
     // Solution 2
-    const isMillenial = () => {
+    const isMillennial = () => {
       console.log(this);
       console.log(this.year >= 1981 && this.year <= 1996);
     };
-    isMillenial();
+    isMillennial();
   },
 
   greet: () => {
